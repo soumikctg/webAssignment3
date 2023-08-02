@@ -14,7 +14,7 @@
         <h1 class="text-center">Contact Us</h1>
         <div class="d-flex justify-content-center align-items-center">
             
-            <form method="post" class="row g-3 justify-content-center">
+            <form method="post" action="{% url 'saveForm' %}" id="contact" novalidate="novalidate" role="form" class="row g-3 justify-content-center">
                 {% csrf_token %}
                 <div class="col-12">
                     <label for="name" class="form-label">Name</label>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-12">
                     <label for="number" class="form-label">Phone Number</label>
-                    <input type="text" name="phone" class="form-control" id="number" placeholder="Enter Your Phone No.">
+                    <input type="tel" name="phone" class="form-control" id="phone" placeholder="Enter Your Phone No.">
                 </div>
                 <div class="col-12">
                     <label for="address" class="form-label">Address</label>
@@ -34,8 +34,8 @@
                 </div>
     
                 <div class="col-12">
-                    <label for="message" name="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="3" placeholder="Enter Your Message Here"></textarea>
+                    <label for="message" class="form-label">Message</label>
+                    <textarea name="message" class="form-control" id="message" rows="3" placeholder="Enter Your Message Here"></textarea>
                 </div>
     
                 <div class="col-12  text-center">

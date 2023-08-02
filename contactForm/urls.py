@@ -20,5 +20,6 @@ from contactForm import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', views.contactForm, name='contact')
+    path('', views.contactForm, name='contact'),
+    path('saveForm/', views.saveForm, name='saveForm'),
 ]
